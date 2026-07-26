@@ -1,0 +1,10 @@
+{
+  "study_area_name": "Orlando_OSM_Study_Area",
+  "center_latitude": 28.5383,
+  "center_longitude": -81.3792,
+  "radius_meters": 4828,
+  "source_crs": "EPSG:4326",
+  "projected_crs": "EPSG:2236",
+  "road_network_type": "drive",
+  "output_directory": "01_raw_data/osm"
+}

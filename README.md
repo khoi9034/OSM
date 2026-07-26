@@ -63,7 +63,27 @@ OSM/
 
 ## Current Status
 
-This repository is currently in the initialization phase. No datasets have been downloaded, no analysis has been completed, and no analytical findings have been produced yet.
+This repository is currently in Phase 1 OSM extraction. No analytical findings have been produced yet.
+
+## Phase 1: OSM Extraction
+
+Phase 1 uses downtown Orlando as the center of the initial study area, covering approximately a three-mile radius. Python and OSMnx retrieve public motor-vehicle roads and building footprints from OpenStreetMap.
+
+Raw OSM tags are preserved so later phases can standardize schemas, validate geometry, measure attribute completeness, and compare OSM features with authoritative GIS data. Downloaded data is intentionally excluded from Git because OSM extracts are local snapshots.
+
+Install dependencies inside a virtual environment or ArcGIS Pro Python environment:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+Run the extraction from the repository root:
+
+```bash
+python 03_scripts/extraction/download_osm_data.py
+```
+
+OSM data changes over time, so feature counts and tags depend on the extraction date.
 
 ## Data Attribution
 
