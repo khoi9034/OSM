@@ -1,0 +1,9 @@
+# ArcPy is provided by an ArcGIS Pro Python environment and should not be installed from PyPI.
+# Dependency versions will be pinned after the initial workflow is tested.
+geopandas
+pandas
+shapely
+pyproj
+requests
+osmnx
+pytest

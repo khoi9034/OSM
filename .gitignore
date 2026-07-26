@@ -1,0 +1,56 @@
+# Python
+.venv/
+venv/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Local environments and editors
+.env
+.env.*
+.vscode/
+.idea/
+
+# ArcGIS Pro and GIS locks
+*.aprx~
+*.lock
+*.sr.lock
+
+# Local GIS datasets and exports
+*.gdb/
+*.shp
+*.shx
+*.dbf
+*.prj
+*.cpg
+*.sbn
+*.sbx
+*.geojson
+*.gpkg
+*.csv
+*.tif
+*.tiff
+*.img
+*.las
+*.laz
+*.log
+
+# Generated maps and reports
+04_maps/*.pdf
+04_maps/*.png
+
+# Large local data kept out of source control
+01_raw_data/**/*
+02_geodatabases/**/*
+05_tables/**/*
+
+!01_raw_data/**/
+!02_geodatabases/**/
+!05_tables/**/
+!01_raw_data/**/.gitkeep
+!02_geodatabases/**/.gitkeep
+!05_tables/**/.gitkeep
+
+# Always keep repository placeholders
+!.gitkeep
