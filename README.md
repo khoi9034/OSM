@@ -21,7 +21,7 @@ The initial study area will cover downtown Orlando and an approximately three-mi
 
 ## Planned Workflow
 
-Extract → Preserve raw data → Standardize → Validate geometry → Measure attribute completeness → Compare with authoritative data → Assess fitness for use → Publish findings
+Extract -> Preserve raw data -> Standardize -> Validate geometry -> Measure attribute completeness -> Compare with authoritative data -> Assess fitness for use -> Publish findings
 
 ## Repository Structure
 
@@ -63,7 +63,9 @@ OSM/
 
 ## Current Status
 
-This repository is currently in Phase 1 OSM extraction. No analytical findings have been produced yet.
+Phase 1 OSM extraction is complete. Phase 2 profiling and standardization is complete after the profiling and standardization scripts run successfully against the local Phase 1 outputs.
+
+No authoritative-data comparison, final QA score, or fitness-for-use conclusion has been completed yet.
 
 ## Phase 1: OSM Extraction
 
@@ -85,9 +87,33 @@ python 03_scripts/extraction/download_osm_data.py
 
 OSM data changes over time, so feature counts and tags depend on the extraction date.
 
+## Phase 2: Profiling and Standardization
+
+Phase 2 profiles the actual raw OSM road-edge and building schemas, measures initial attribute completeness, and creates controlled operational road and building datasets for later QA/QC and authoritative comparison.
+
+Run profiling from the repository root:
+
+```bash
+python 03_scripts/standardization/profile_osm_data.py
+```
+
+Run standardization from the repository root:
+
+```bash
+python 03_scripts/standardization/standardize_osm_data.py
+```
+
+Optional ArcGIS Pro file geodatabase export:
+
+```bash
+python 03_scripts/standardization/export_to_file_gdb.py
+```
+
+Generated spatial and tabular outputs remain excluded from Git, including raw GeoJSON files, GeoPackages, file geodatabases, CSV reports, and JSON analytical summaries. Code, tests, configuration, and methodology documentation are version controlled.
+
 ## Data Attribution
 
-© OpenStreetMap contributors
+(c) OpenStreetMap contributors
 
 OSM data is distributed under the Open Database License and requires attribution.
 
